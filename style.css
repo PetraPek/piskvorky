@@ -1,1 +1,40 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  background: linear-gradient(#615dad, #ffc8da);
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.piskvorky {
+  width: 25rem;
+  margin: 2.5rem 30rem;
+  padding: 0;
+  background-color: #283e50;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.obrazek {
+  max-width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+h1 {
+  padding: 1rem 0 0 0;
+  font-family: 'Lobster';
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.popis {
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 1.5rem;
+  padding: 1.5rem;
+  margin: 0;
+}
