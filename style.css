@@ -47,6 +47,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
+
 }
 
 .game_button_green {
@@ -54,4 +55,20 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-size: 1.5rem;
+  margin-bottom: 0.1rem;
+}
+
+:hover.game_button_green {
+  background-color: #1cbb96;
+}
+
+.game_button_blue {
+  background-color: #0197f6;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+:hover.game_button_blue {
+  background-color: #0090e9;
 }
