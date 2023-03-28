@@ -11,22 +11,22 @@ body {
 .game {
   display: flex;
   flex-direction: column;
-  margin: 3% 40% 0% 40%;
+  margin: 3% auto 0% auto;
   width: 30rem;
   height: 70rem;
 }
 
-.game_picture {
+.game__picture {
   max-width: 100%;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.game_content {
+.game__content {
   background-color: #283e50;
 }
 
 
-.game_title {
+.game__title {
   padding: 1rem 0 0 0;
   font-family: 'Lobster';
   text-align: center;
@@ -34,7 +34,7 @@ body {
   margin: 0;
 }
 
-.game_description {
+.game__description {
   text-align: center;
   font-family: sans-serif;
   line-height: 1.5rem;
@@ -42,33 +42,32 @@ body {
   margin: 0;
 }
 
-.game_buttons {
+.game__buttons {
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
+  font-size: 1.5rem;
 
 }
 
-.game_button_green {
+.game__button--green {
   background-color: #1fcca4;
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.5rem;
   margin-bottom: 0.1rem;
 }
 
-:hover.game_button_green {
+:hover.game__button--green {
   background-color: #1cbb96;
 }
 
-.game_button_blue {
+.game__button--blue {
   background-color: #0197f6;
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.5rem;
 }
 
-:hover.game_button_blue {
+:hover.game__button--blue {
   background-color: #0090e9;
 }
