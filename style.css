@@ -71,3 +71,26 @@ body {
 :hover.game__button--blue {
   background-color: #0090e9;
 }
+
+.grid {
+  display: grid;
+  max-width: 80vmin;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.grid__button {
+  width: 8vmin;
+  height: 8vmin;
+  border-radius: 0;
+  background-color: #E0CCE0;
+  cursor: pointer;
+}
+
+.grid__button:focus {
+  background-color: #EFE5EF;
+}
+
+.grid__button:hover {
+  background-color: #EFE5EF;
+}
