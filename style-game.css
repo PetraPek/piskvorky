@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#615dad, #ffc8da);
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.game {
+  max-width: 80vmin;
+  margin: auto;
+}
+
+.game__title {
+  font-family: "Lobster", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.game__menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 0 auto;
+  width: 80%;
+
+}
+
+.game__menuLeft,
+.game__menuRight {
+  display: flex;
+  align-items: center;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+
+.game__menuHome {
+  border-radius: 3px;
+  padding: 0.4rem;
+  margin: auto 0.4rem;
+  background-color: #1fcca4;
+}
+
+.game__menuHome:hover {
+  background-color: #1cbb96;
+}
+
+.game__menuRestart {
+  border-radius: 3px;
+  padding: 0.4rem;
+  margin: auto 0.4rem;
+  background-color: #0197f6;
+}
+
+.game__menuRestart:hover {
+  background-color: #0090e9;
+}
+
+.game__field {
+  width: 80%;
+  border: 1px solid gray;
+  margin: 1rem auto 4rem;
+}
+
+.game__field button {
+  background-color: rgb(226, 188, 205);
+  border: 1px solid gray;
+  float: left;
+  width: calc(100%/10);
+  border-radius: 0px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.game__field button:hover {
+  border: 1px solid gray;
+  background-color: rgb(247, 216, 230);
+}
