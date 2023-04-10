@@ -22,7 +22,7 @@ body {
 .game__menu {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto 0 auto;
+  margin: auto;
   width: 80%;
 
 }
@@ -42,7 +42,8 @@ body {
   background-color: #1fcca4;
 }
 
-.game__menuHome:hover {
+.game__menuHome:hover,
+.game__menuHome:focus {
   background-color: #1cbb96;
 }
 
@@ -53,13 +54,13 @@ body {
   background-color: #0197f6;
 }
 
-.game__menuRestart:hover {
+.game__menuRestart:hover,
+.game__menuRestart:focus {
   background-color: #0090e9;
 }
 
 .game__field {
   width: 80%;
-  border: 1px solid gray;
   margin: 1rem auto 4rem;
 }
 
@@ -74,7 +75,7 @@ body {
   opacity: 80%;
 }
 
-.game__field button:hover {
-  border: 1px solid gray;
+.game__field button:hover,
+.game__field button:focus {
   background-color: rgb(247, 216, 230);
 }
