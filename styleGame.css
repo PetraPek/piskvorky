@@ -24,7 +24,6 @@ body {
   justify-content: space-between;
   margin: auto;
   width: 80%;
-
 }
 
 .game__menuLeft,
@@ -78,4 +77,27 @@ body {
 .game__field button:hover,
 .game__field button:focus {
   background-color: rgb(247, 216, 230);
+}
+
+.board__field--circle::before {
+  content: '';
+  width: 60%;
+  height: 50%;
+  border-radius: 100%;
+  border: 3px solid black;
+  display: inline-block;
+}
+
+.board__field--cross::after,
+.board__field--cross::before {
+  content: '';
+  height: 60%;
+  border: 2px solid black;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+.board__field--cross::before {
+  transform: rotate(-45deg);
+  left: 5px;
 }
