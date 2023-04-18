@@ -1,15 +1,5 @@
 let currentPlayer = 'circle';
 
-const playerCircle = `
-<svg width="35" height="35">
-    <circle/>
-</svg>`;
-
-const playerCross = `
-<svg width="24" height="24">
-    <cross/> 
-</svg>`;
-
 const game = (event) => {
   if (currentPlayer === 'circle') {
     event.target.classList.add('board__field--circle');
@@ -34,13 +24,7 @@ const game = (event) => {
   }
 };
 
-document.querySelector('button:nth-child(1)').addEventListener('click', game);
-document.querySelector('button:nth-child(2)').addEventListener('click', game);
-document.querySelector('button:nth-child(3)').addEventListener('click', game);
-document.querySelector('button:nth-child(4)').addEventListener('click', game);
-document.querySelector('button:nth-child(5)').addEventListener('click', game);
-document.querySelector('button:nth-child(6)').addEventListener('click', game);
-document.querySelector('button:nth-child(7)').addEventListener('click', game);
-document.querySelector('button:nth-child(8)').addEventListener('click', game);
-document.querySelector('button:nth-child(9)').addEventListener('click', game);
-document.querySelector('button:nth-child(10)').addEventListener('click', game);
+const allButtons = document.querySelectorAll('.game__field');
+allButtons.forEach((gameField) => {
+  gameField.addEventListener('click', game);
+});
