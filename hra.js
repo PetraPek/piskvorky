@@ -1,3 +1,4 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 let currentPlayer = 'circle';
 
 const crossElm = `
@@ -35,6 +36,29 @@ const game = (event) => {
     currentPlayer = 'circle';
     event.target.disabled = true;
     document.querySelector('.changeIcon').innerHTML = circleElm;
+  }
+
+  const allButtons = document.querySelectorAll('.buttonPlay');
+  let fieldGame = [];
+
+  allButtons.forEach((button) => {
+    if (button.classList.contains('board__field--circle')) {
+      fieldGame.push('o');
+    } else if (button.classList.contains('board__field--cross')) {
+      fieldGame.push('x');
+    } else {
+      fieldGame.push('_');
+    }
+  });
+
+  let winner = findWinner(fieldGame);
+  if (winner === 'o' || winner === 'x') {
+    const timeLate = () => {
+      alert(`Vyhrál hráč se symbolem ${winner}.`);
+
+      location.reload();
+    };
+    setTimeout(timeLate, 100);
   }
 };
 
