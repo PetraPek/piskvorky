@@ -39,7 +39,7 @@ const game = (event) => {
   }
 
   const allButtons = document.querySelectorAll('.buttonPlay');
-  let fieldGame = [];
+  const fieldGame = [];
 
   allButtons.forEach((button) => {
     if (button.classList.contains('board__field--circle')) {
@@ -61,9 +61,8 @@ const game = (event) => {
     setTimeout(timeLate, 100);
     return;
   }
-
   if (currentPlayer === 'cross') {
-    const blabla = fetch(
+    const fullGame = fetch(
       'https://piskvorky.czechitas-podklady.cz/api/suggest-next-move',
       {
         method: 'POST',
@@ -74,13 +73,14 @@ const game = (event) => {
         }),
       },
     );
-    blabla.then((response) => {
-      return response.json();
-    });
-    blabla.then((data) => {
-      const index = data.position.x + data.position.y * 10;
-      allButtons[index].click();
-    });
+    fullGame
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const index = data.position.x + data.position.y * 10;
+        allButtons[index].click();
+      });
   }
 };
 
