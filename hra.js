@@ -59,6 +59,28 @@ const game = (event) => {
       location.reload();
     };
     setTimeout(timeLate, 100);
+    return;
+  }
+
+  if (currentPlayer === 'cross') {
+    const blabla = fetch(
+      'https://piskvorky.czechitas-podklady.cz/api/suggest-next-move',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          board: fieldGame,
+          player: 'x',
+        }),
+      },
+    );
+    blabla.then((response) => {
+      return response.json();
+    });
+    blabla.then((data) => {
+      const index = data.position.x + data.position.y * 10;
+      allButtons[index].click();
+    });
   }
 };
 

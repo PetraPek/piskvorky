@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "dayjs": "^1.11.7",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.0"
+  }
+}
